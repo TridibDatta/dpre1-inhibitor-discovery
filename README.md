@@ -32,7 +32,7 @@ DprE1 Activity Data → GNN + XGBoost Hybrid Model → Reward Function
 
 ### Dataset
 
-- **ChEMBL v35**: 2,854,815 molecules (filtered to ~100,000 drug-like molecules)
+- **ChEMBL v35**: 2,854,815 molecules (filtered to ~500,000 drug-like molecules)
 - **DprE1 Activity Dataset**: 1,520 molecules with binary activity labels
 - **Filters Applied**: SMILES length (6-150), heavy atoms (5-50), valid RDKit molecules
 
@@ -45,7 +45,7 @@ DprE1 Activity Data → GNN + XGBoost Hybrid Model → Reward Function
 
 ### Training Details
 
-- **Pretraining**: 5 epochs on 100K ChEMBL molecules
+- **Pretraining**: 5 epochs on 100K-500k ChEMBL molecules
 - **Hybrid Model**: 20 epochs on DprE1 dataset (80/20 split)
 - **PPO Fine-tuning**: 200 iterations, batch size 64, KL coefficient 0.05
 
@@ -61,7 +61,7 @@ DprE1 Activity Data → GNN + XGBoost Hybrid Model → Reward Function
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/dpre1-inhibitor-discovery.git
+git clone https://github.com/TridibDatta/dpre1-inhibitor-discovery.git
 cd dpre1-inhibitor-discovery
 
 # Create virtual environment
@@ -168,16 +168,7 @@ The pipeline typically generates 50-100 high-scoring candidates with:
 
 ## Citation
 
-If you use this code in your research, please cite:
-
-```bibtex
-@misc{dpre1-inhibitor-discovery,
-  author = {Your Name},
-  title = {AI-Driven Generation of DprE1 Inhibitors},
-  year = {2025},
-  publisher = {GitHub},
-  url = {https://github.com/YOUR_USERNAME/dpre1-inhibitor-discovery}
-}
+This project is under JCIM review 
 ```
 
 ## References
